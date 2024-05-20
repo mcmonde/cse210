@@ -63,7 +63,7 @@ class Program
     
     static Reference ParseScriptureReference(string reference)
     {
-        Regex regex = new Regex(@"^(?:(?<num>\d+)\s)?(?<book>(?:\d+\s)?\w+)\s(?<chapter>\d+):(?<startVerse>\d+)(?:-(?<endVerse>\d+))?$");
+        Regex regex = new Regex(@"^(?:(?<num>\d+)\s)?(?<book>(?:\d+\s)?(?:\w+\s)+\w+)\s(?<chapter>\d+):(?<startVerse>\d+)(?:-(?<endVerse>\d+))?$");
 
         Match match = regex.Match(reference);
 

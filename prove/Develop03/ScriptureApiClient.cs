@@ -11,6 +11,7 @@ public class ScriptureApiClient
     {
         _client = new HttpClient();
         _client.BaseAddress = new Uri("https://openscriptureapi.org/api/scriptures/v1/lds/en/volume/"); // Replace with actual API base URL
+        // https://openscriptureapi.org
     }
 
     public async Task<string> GetScriptureTextAsync(Reference reference)
