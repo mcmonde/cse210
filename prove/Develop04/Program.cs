@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string[] choices = { "Breathing", "Reflecting", "Listening", "Quit" };
+        string[] choices = { "Start breathing activity", "Start reflecting activity", "Start listing activity", "Quit" };
         MainMenu mainMenu = new MainMenu(choices);
 
         bool quit = false;

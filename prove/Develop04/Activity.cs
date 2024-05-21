@@ -16,12 +16,12 @@ namespace Develop04
         
         public void DisplayStartingMessage()
         {
-            
+            Console.WriteLine(_name);
         }
 
         public void DisplayEndingMessage()
         {
-            
+            Console.WriteLine(_description);
         }
 
         public void ShowSpinner(int seconds)

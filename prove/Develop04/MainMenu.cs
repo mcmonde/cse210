@@ -21,11 +21,12 @@ class MainMenu : Menu
                 string choice = Choices[ChoiceIndex];
                 switch (choice)
                 {
-                    case "Breathing":
+                    case "Start breathing activity":
+                        
                         break;
-                    case "Reflecting":
+                    case "Start reflecting activity":
                         break;
-                    case "Listening":
+                    case "Start listing activity":
                         break;
                     case "Quit":
                         Console.WriteLine("Exiting Program.");
