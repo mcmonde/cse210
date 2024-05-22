@@ -4,7 +4,13 @@ namespace Develop04
 {
     public class ListingActivity
     {
+        protected int _count;
+        protected List<string> _list;
 
+        // public ListingActivity()
+        // {
+        //     
+        // }
         public void Run()
         {
             

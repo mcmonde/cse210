@@ -1,4 +1,5 @@
 using System;
+using Develop04;
 
 class MainMenu : Menu
 {
@@ -22,7 +23,14 @@ class MainMenu : Menu
                 switch (choice)
                 {
                     case "Start breathing activity":
-                        
+                        string name = "Welcome to the Breathing Activity";
+                        string description = "This activity will help you relax by walking through breathing in " +
+                                             "and out slowly. Clear your mind and focus on your breathing.";
+                        BreathingActivity breath = new BreathingActivity(name, description);
+                        Console.Clear();
+                        breath.DisplayStartingMessage();
+                        breath.DisplayEndingMessage();
+                        breath.Run();
                         break;
                     case "Start reflecting activity":
                         break;
