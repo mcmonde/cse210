@@ -23,18 +23,16 @@ class MainMenu : Menu
                 switch (choice)
                 {
                     case "Start breathing activity":
-                        string name = "Welcome to the Breathing Activity";
-                        string description = "This activity will help you relax by walking through breathing in " +
-                                             "and out slowly. Clear your mind and focus on your breathing.";
-                        BreathingActivity breath = new BreathingActivity(name, description);
-                        Console.Clear();
-                        breath.DisplayStartingMessage();
-                        breath.DisplayEndingMessage();
-                        breath.Run();
+                        BreathingActivity breathingActivity = new BreathingActivity();
+                        breathingActivity.Run();
                         break;
                     case "Start reflecting activity":
+                        ReflectingActivity reflectingActivity = new ReflectingActivity();
+                        reflectingActivity.Run();
                         break;
                     case "Start listing activity":
+                        ListingActivity listingActivity = new ListingActivity();
+                        listingActivity.Run();
                         break;
                     case "Quit":
                         Console.WriteLine("Exiting Program.");
