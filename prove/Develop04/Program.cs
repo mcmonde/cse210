@@ -1,3 +1,7 @@
+// To exceed expectations:
+// make UI interactive using up and down arrow keys
+// you don't need to input choices.
+
 using System;
 
 class Program
