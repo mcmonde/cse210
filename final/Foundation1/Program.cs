@@ -1,55 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-namespace YouTubeVideoTracker
+namespace Foundation1
 {
-    // Comment class to store details of a comment
-    public class Comment
-    {
-        public string CommenterName { get; set; }
-        public string Text { get; set; }
-
-        public Comment(string commenterName, string text)
-        {
-            CommenterName = commenterName;
-            Text = text;
-        }
-    }
-
-    // Video class to store details of a video and its comments
-    public class Video
-    {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public int Length { get; set; } // Length in seconds
-        private List<Comment> Comments { get; set; }
-
-        public Video(string title, string author, int length)
-        {
-            Title = title;
-            Author = author;
-            Length = length;
-            Comments = new List<Comment>();
-        }
-
-        // Method to add a comment to the video
-        public void AddComment(Comment comment)
-        {
-            Comments.Add(comment);
-        }
-
-        // Method to get the number of comments on the video
-        public int GetNumberOfComments()
-        {
-            return Comments.Count;
-        }
-
-        // Method to get the list of comments on the video
-        public List<Comment> GetComments()
-        {
-            return Comments;
-        }
-    }
 
     class Program
     {
@@ -74,23 +27,20 @@ namespace YouTubeVideoTracker
             video3.AddComment(new Comment("Hannah", "Japan is on my bucket list now."));
             video3.AddComment(new Comment("Ian", "Great editing skills!"));
 
-            // Add videos to the list
             videos.Add(video1);
             videos.Add(video2);
             videos.Add(video3);
 
-            // Display information about each video
-            foreach (var video in videos)
-            {
+            foreach (var video in videos) {
                 Console.WriteLine($"Title: {video.Title}");
                 Console.WriteLine($"Author: {video.Author}");
                 Console.WriteLine($"Length: {video.Length} seconds");
                 Console.WriteLine($"Number of Comments: {video.GetNumberOfComments()}");
 
-                foreach (var comment in video.GetComments())
-                {
+                foreach (var comment in video.GetComments()) {
                     Console.WriteLine($"- {comment.CommenterName}: {comment.Text}");
                 }
+                
                 Console.WriteLine(); // Blank line for better readability
             }
         }
